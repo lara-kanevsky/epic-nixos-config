@@ -14,25 +14,41 @@
     home.stateVersion = "24.11";
 
     home.packages = with pkgs; [
+      #Basico
       ripgrep
       less
-      nixfmt-rfc-style
       tree
       git
+
+      #Texto/terminal
       vscode
-      docker
       kitty
-      kubectl
-      google-chrome
+      tmux
+      code-cursor
+
+      #Entorno grafico
       xclip
       maim
       rofi
       feh
-      krita
-      brightnessctl
       pulseaudio
+      brightnessctl
+
+      #Apps
+      google-chrome
+
+      #Arte digital
+      krita
+
+      #Desarrollo (mover a dev shells)
+      nixfmt-rfc-style
+      kubectl
+      docker
     ];
+
     programs.google-chrome.enable = true;
+
+    #Dotfiles
 
     xdg.configFile = {
       "i3" = {
@@ -51,8 +67,10 @@
     # Dotfiles en $HOME
     home.file = {
       ".bashrc".source = ./home/.bashrc;
-    };
+      ".bash_aliases".source = ./home/.bash_aliases;
+      ".tmux.conf".source = ./home/.tmux.conf;
 
+    };
   };
 
 }

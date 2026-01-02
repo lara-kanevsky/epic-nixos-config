@@ -18,6 +18,10 @@
   networking.networkmanager.enable = true;
   time.timeZone = "America/Argentina/Buenos_Aires";
 
+  virtualisation.docker = {
+    enable = true;
+  };
+
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
   # console = {
@@ -43,22 +47,11 @@
   };
   console.keyMap = "la-latin1";
 
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # Enable sound.
-  # hardware.pulseaudio.enable = true;
-  # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
-
   users.users.lareadmin = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "docker" ];
     packages = with pkgs; [
-      
+
     ];
   };
 
