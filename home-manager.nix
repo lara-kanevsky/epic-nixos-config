@@ -19,12 +19,13 @@
       less
       tree
       git
+      unrar
 
       #Texto/terminal
       vscode
       kitty
       tmux
-      code-cursor
+      neovim
 
       #Entorno grafico
       xclip
@@ -36,6 +37,7 @@
 
       #Apps
       google-chrome
+      obsidian
 
       #Arte digital
       krita
@@ -44,10 +46,22 @@
       nixfmt-rfc-style
       kubectl
       docker
+      python3
+      kubernetes-helm
     ];
 
     programs.google-chrome.enable = true;
+    programs.git = {
+    enable = true;
 
+    userName  = "Lare";
+    userEmail = "larakanevsky@gmail.com";
+
+    extraConfig = {
+      init.defaultBranch = "main";
+      pull.rebase = true;
+    };
+  };
     #Dotfiles
 
     xdg.configFile = {

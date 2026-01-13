@@ -54,6 +54,8 @@
 
     ];
   };
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  programs.thunar.enable = true;
 
   services.dbus.enable = true;
   services.upower.enable = true;
