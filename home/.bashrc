@@ -152,5 +152,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export KUBECONFIG=$HOME/.kube/config
-export PATH=$PATH:/usr/local/go/bin
-. "$HOME/.local/bin/env"
+# export PATH=$PATH:/usr/local/go/bin
+# . "$HOME/.local/bin/env"

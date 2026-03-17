@@ -16,12 +16,22 @@
   boot.loader.efi.efiSysMountPoint = "/boot";
   networking.hostName = "antonietacookstation";
   networking.networkmanager.enable = true;
+  networking.firewall.allowedTCPPorts = [ 8384 22000 ];
+  networking.firewall.allowedUDPPorts = [ 22000 21027 ];
+  networking.extraHosts =
+    ''
+    127.0.0.1  ivar.iquall.net
+    '';
   time.timeZone = "America/Argentina/Buenos_Aires";
-
+environment.pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
   virtualisation.docker = {
     enable = true;
   };
-
+  fonts.packages = with pkgs; [
+    iosevka
+  ];
+  virtualisation.libvirtd.enable = true;
+  boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
   # console = {
@@ -49,7 +59,7 @@
 
   users.users.lareadmin = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" ];
+    extraGroups = [ "wheel" "docker" "qemu-libvirtd" "libvirtd" ];
     packages = with pkgs; [
 
     ];
