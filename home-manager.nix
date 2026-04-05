@@ -43,6 +43,7 @@
       inkscape
       rmpc
       mpd
+      calibre
 
       #Arte digital
       krita
@@ -53,6 +54,10 @@
       docker
       python3
       kubernetes-helm
+
+      code-cursor
+      toot
+      gajim
     ];
 
     programs.google-chrome.enable = true;
@@ -104,7 +109,7 @@
       ".bashrc".source = ./home/.bashrc;
       ".bash_aliases".source = ./home/.bash_aliases;
       ".tmux.conf".source = ./home/.tmux.conf;
-
+      ".ssh/config".source = ./home/.ssh/config;
     };
     
     services = {

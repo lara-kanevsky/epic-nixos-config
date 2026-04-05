@@ -20,7 +20,8 @@
   networking.firewall.allowedUDPPorts = [ 22000 21027 ];
   networking.extraHosts =
     ''
-    127.0.0.1  ivar.iquall.net
+    127.0.0.1  mat.ivar.iquall.net
+    10.71.17.100 mat.ivar.iquall.net
     '';
   time.timeZone = "America/Argentina/Buenos_Aires";
 environment.pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
