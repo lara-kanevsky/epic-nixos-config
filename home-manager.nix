@@ -26,6 +26,7 @@
       kitty
       tmux
       neovim
+      emacs
 
       #Entorno grafico
       xclip
@@ -34,6 +35,7 @@
       feh
       pulseaudio
       brightnessctl
+      picom
 
       #Apps
       google-chrome
@@ -44,9 +46,14 @@
       rmpc
       mpd
       calibre
+      qbittorrent
+      zotero
+      calibre
+      nchat
 
       #Arte digital
       krita
+      obs-studio
 
       #Desarrollo (mover a dev shells)
       nixfmt-rfc-style
@@ -54,6 +61,7 @@
       docker
       python3
       kubernetes-helm
+      claude-code
 
       code-cursor
       toot
@@ -99,6 +107,12 @@
 
       "rmpc" = {
         source = ./home/.config/rmpc;
+        recursive = true;
+        force = true;
+      };
+
+      "picom" = {
+        source = ./home/.config/picom;
         recursive = true;
         force = true;
       };

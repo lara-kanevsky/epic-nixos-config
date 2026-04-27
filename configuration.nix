@@ -21,8 +21,9 @@
   networking.extraHosts =
     ''
     127.0.0.1  mat.ivar.iquall.net
-    10.71.17.100 mat.ivar.iquall.net
     '';
+        # 10.71.17.100 mat.ivar.iquall.net
+
   time.timeZone = "America/Argentina/Buenos_Aires";
 environment.pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
   virtualisation.docker = {
@@ -67,10 +68,12 @@ environment.pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
   };
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   programs.thunar.enable = true;
+  hardware.bluetooth.enable = true;
 
   services.dbus.enable = true;
   services.upower.enable = true;
   services.timesyncd.enable = true;
+  services.blueman.enable = true;
 
   programs.firefox.enable = true;
 

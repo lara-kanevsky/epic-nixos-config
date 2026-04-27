@@ -120,7 +120,7 @@ rainbow_echo() {
   echo
 }
 
-rainbow_echo "🌈 Bienvenitres perri 🌈"
+rainbow_echo "🌈 Bienvenitres lare 🌈 --- Que tengas lindo dia <3"
 
 # export QT_QPA_PLATFORM=wayland
 # export QT_WAYLAND_FORCE_DPI=physical

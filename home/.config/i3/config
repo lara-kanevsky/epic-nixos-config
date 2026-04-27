@@ -1,24 +1,20 @@
 include ~/.cache/wal/colors.conf
 
-# for_window [class=".*"] border none
-gaps inner 2
-gaps outer 2
+gaps inner 6
+gaps outer 5
 
 set $term kitty
 set $menu rofi -show drun
 
+exec_always picom --config ~/.config/picom/picom.conf
 exec_always "setxkbmap -layout es"
-# default_border pixel 3
-# hide_edge_borders both
 exec_always --no-startup-id polybar example
-
 exec google-chrome
-
 set $env OZONE_PLATFORM x11
 set $env QT_QPA_PLATFORM xcb
 exec --no-startup-id export OZONE_PLATFORM=x11
 exec --no-startup-id export QT_QPA_PLATFORM=xcb
-exec feh --bg-scale puntofiles/wallpapers/wallpaper.jpg
+exec feh --bg-scale Downloads/usagi-chiikawa-5120x2880-15915.png 
 
 # Screenshot de toda la pantalla y copiar al portapapeles
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
